@@ -8,7 +8,8 @@ function SearchBox(props) {
         <form>
             
         <div className="container col-md-4 form-group">
-            <div>
+            
+            <form className="form-inline">
                 <input
                 onChange={props.handleInputChange}
                 value={props.value}
@@ -19,8 +20,8 @@ function SearchBox(props) {
                 id="search"
                 />
                 <br />
-                <button onClick={props.handleFormSubmit} className="btn btn-primary">Search</button>
-            </div>
+                <button onClick={props.handleFormSubmit} className="btn btn-danger">Search</button>
+            </form>
         </div>
         </form>
       );

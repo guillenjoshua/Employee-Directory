@@ -1,31 +1,10 @@
-import React, { Component } from "react";
-import SearchInput from "./components/SearchInput"
+import React from "react";
+import EmployeeContainer from "./components/EmployeeContainer";
 
 
-class App extends Component {
-
-
-  state = {
-    employees: [],
-};
-
-  render(){
-
-    return (
-
-    <div>
-      <h1>Stop Copying My Cheese!!</h1>
-      <SearchInput />
-    </div>
-
-    );
-
-
-
-
-
-
-  }
+function App() {
+  return <EmployeeContainer />;
 }
+
   export default App;
   
