@@ -3,6 +3,7 @@ import API from "../../utils/API";
 import SearchInput from "../SearchInput"
 import Wrapper from "../Wrapper";
 import EmployeeRow from "../EmployeeRow"
+import Header from "../Header"
 
 
 class EmployeeContainer extends Component {
@@ -38,17 +39,23 @@ class EmployeeContainer extends Component {
         }
       };
 
+   
+
       handleInputChange = event => {
         const value = event.target.value;
+        // eslint-disable-next-line
         const name = event.target.name;
         this.setState({
-          [name]: value
+          result: this.state.result.filter(e => e.firstName.includes(value)),
+          // [name]: value
         });
       };
 
+  
+
       handleFormSubmit = event => {
         event.preventDefault();
-        this.searchEmployees(this.state.search);
+        this.searchEmployees(this.state.result);
       };
 
 
@@ -58,6 +65,7 @@ class EmployeeContainer extends Component {
     
         <div>
           <Wrapper>
+          <Header />
           <SearchInput 
           value={this.state.search}
           handleInputChange={this.handleInputChange}
