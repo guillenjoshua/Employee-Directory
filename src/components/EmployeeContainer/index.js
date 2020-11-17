@@ -38,7 +38,13 @@ class EmployeeContainer extends Component {
         }
       };
 
-
+      handleInputChange = event => {
+        const value = event.target.value;
+        const name = event.target.name;
+        this.setState({
+          [name]: value
+        });
+      };
 
       handleFormSubmit = event => {
         event.preventDefault();
@@ -52,7 +58,11 @@ class EmployeeContainer extends Component {
     
         <div>
           <Wrapper>
-          <SearchInput />
+          <SearchInput 
+          value={this.state.search}
+          handleInputChange={this.handleInputChange}
+          handleFormSubmit={this.handleFormSubmit}
+          />
           <EmployeeRow employees={this.state.result} />
           </Wrapper>
         </div>
