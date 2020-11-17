@@ -1,23 +1,24 @@
 import React from 'react';
 
 
-// function EmployeeRow (props){
+const EmployeeRow = (props) => {
 
-// return (
+return (
 
-//     <tr>
-//         {/* <td>
-//         <img src={props.employee.img} alt="" />
-//         </td>
-//         <td>{props.employee.firstName + " " + props.employee.lastName}</td>
-//         <td>{props.employee.cell}</td>
-//         <td>{props.employee.email}</td> */}
-//     </tr>
+    <tr>
+        <td>
+        <img src={props.employee.img} alt="" />
+        </td>
+        <td>{props.employee.firstName + " " + props.employee.lastName}</td>
+        <td>{props.employee.cell}</td>
+        <td>{props.employee.email}</td>
+    </tr>
     
-// )
+    )
 
+}
 
-function EmployeeColumns (props) {
+const EmployeeColumns = (props) => {
 
   return (
 
@@ -30,15 +31,17 @@ function EmployeeColumns (props) {
                 <th scope="col">Email: </th>
             </tr>
         </thead>
+
+        <tbody>
+            { props.employees.map((x, i) => (
+                <EmployeeRow employee={x} key={i + "EmployeeRow"} /> 
+                ))}
+        </tbody>
+
     </table>
 
   )
 
 }
-
-
-
-// }
-
 
 export default EmployeeColumns; 
