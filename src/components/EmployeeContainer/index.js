@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import API from "../../utils/API";
 import SearchInput from "../SearchInput"
 import Wrapper from "../Wrapper";
-import EmployeeRow from "../EmployeeRow"
-import Header from "../Header"
+import EmployeeRow from "../EmployeeRow";
+import Header from "../Header";
+
+
+
 
 
 class EmployeeContainer extends Component {

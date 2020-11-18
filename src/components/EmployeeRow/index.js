@@ -33,8 +33,8 @@ const EmployeeColumns = (props) => {
         </thead>
 
         <tbody>
-            { props.employees.map((x, i) => (
-                <EmployeeRow employee={x} key={i + "EmployeeRow"} /> 
+            { props.employees.map((e, i) => (
+                <EmployeeRow employee={e} key={i} /> 
                 ))}
         </tbody>
 

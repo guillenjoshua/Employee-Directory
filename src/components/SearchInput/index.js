@@ -16,11 +16,11 @@ function SearchBox(props) {
                 name="search"
                 type="text"
                 className="form-control"
-                placeholder="Employee Name"
+                placeholder="Search Employee Name"
                 id="search"
                 />
                 <br />
-                <button onClick={props.handleFormSubmit} className="btn btn-danger">Search</button>
+                {/* <button onClick={props.handleFormSubmit} className="btn btn-danger">Search</button> */}
             </form>
         </div>
         </form>
