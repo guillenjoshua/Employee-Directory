@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function SearchBox(props) {
+function SearchBox({ value, handleInputChange}) {
 
 
     return (
@@ -11,13 +11,13 @@ function SearchBox(props) {
             
             <form className="form-inline">
                 <input
-                onChange={props.handleInputChange}
-                value={props.value}
+                value={value}
                 name="search"
                 type="text"
                 className="form-control"
                 placeholder="Search Employee Name"
                 id="search"
+                onChange={handleInputChange}
                 />
                 <br />
                 {/* <button onClick={props.handleFormSubmit} className="btn btn-danger">Search</button> */}

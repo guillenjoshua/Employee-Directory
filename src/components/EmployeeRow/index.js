@@ -1,24 +1,24 @@
 import React from 'react';
 
 
-const EmployeeRow = (props) => {
+const EmployeeRow = ({employee}) => {
 
 return (
 
     <tr>
         <td>
-        <img src={props.employee.img} alt="" />
+        <img src={employee.img} alt="" />
         </td>
-        <td>{props.employee.firstName + " " + props.employee.lastName}</td>
-        <td>{props.employee.cell}</td>
-        <td>{props.employee.email}</td>
+        <td>{employee.firstName + " " + employee.lastName}</td>
+        <td>{employee.cell}</td>
+        <td>{employee.email}</td>
     </tr>
     
     )
 
 }
 
-const EmployeeColumns = (props) => {
+const EmployeeColumns = ({employees}) => {
 
   return (
 
@@ -33,7 +33,7 @@ const EmployeeColumns = (props) => {
         </thead>
 
         <tbody>
-            { props.employees.map((e, i) => (
+            { employees.map((e, i) => (
                 <EmployeeRow employee={e} key={i} /> 
                 ))}
         </tbody>
