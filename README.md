@@ -9,7 +9,7 @@ The Employee Directory was created by utilizing React to populate the page and s
 
 ## Usage
 
-Simply input the name of the Employee in the seacrh box at the top of the page and the name will be filtered to only show that individual or indivisuals.  The name in the search box must have the first letter capitalized.  
+Simply input the name of the Employee in the seacrh box at the top of the page and the name will be filtered to only show that individual or individuals.  The name in the search box must have the first letter capitalized.  
 
 ## Budget-Tracker GitHub Link
 https://guillenjoshua.github.io/Employee-Directory/
